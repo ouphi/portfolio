@@ -5,11 +5,11 @@ $(document).ready(function() {
 	var row1_done = false;
 	var row2_done = false;
 	
-	header.css('height', (window.innerHeight+329)+'px');
+	header.css('height', (window.innerHeight)+'px');
 	projects.css('height', (Math.round(window.innerHeight/2) - 80)+'px');
 	
 	$(window).resize(function() {
-		header.css('height', (window.innerHeight+329)+'px');
+		header.css('height', (window.innerHeight)+'px');
 		projects.css('height', (Math.round(window.innerHeight/2) - 80)+'px');
 	});
 	
@@ -38,6 +38,10 @@ $(document).ready(function() {
 			projects.eq(6).addClass("slideBottom");
 		}
 	});
+	
+	$("i.pointer").click(function() {
+		$('html, body').animate({scrollTop: window.innerHeight}, 750);
+	})
 });
 
 $(window).load(function() {
